@@ -1,0 +1,336 @@
+@import 'base';
+
+/*
+ * 	tips
+ */
+.common-tips {
+	width: 50%;
+	height: auto;
+	line-height: 2rem;
+	font-size: 1rem;
+	text-align: center;
+	padding: 1rem .625rem;
+	position: fixed;
+	top: 50%;
+	left: 25%;
+	z-index: 990;
+	display: none;
+	margin-top: -4rem;
+	background-color: rgba(0,0,0, .5);
+	color: $color_fff;
+	@include borderRadius();
+}
+
+/*
+ * 	toast
+ */
+.common-toast {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index:990;
+	display: none;
+	
+	.common-toast-conner{
+		width: 50%;
+		height: auto;
+		position: absolute;
+		top: 50%;
+		margin-top: -4rem;
+		left: 25%;
+		z-index: 991;
+		background-color:  rgba(0, 0, 0, .5);
+		color: $color_fff;
+		@include borderRadius();
+		padding: 1rem .625rem;
+		
+		p {
+			height: auto;
+			line-height: 2rem;
+			padding: .5rem 0;
+			text-align: center;
+		}
+		
+		span {
+		    display: block;
+		    text-align: center;
+		    height: 3rem;
+		}
+		
+		em {
+			width: 3rem;
+			height: 3rem;
+			display: inline-block;
+		}
+	}
+}
+.common-icon {
+	background: url(../images/ok.png) center center no-repeat;
+	
+	background-size: 100% 100%;
+}
+.common-icon-success {
+	background: url(../images/ok.png) center center no-repeat;
+	background-size: 100% 100%;
+}
+
+/*
+ * 	prompt
+ */
+.common-prompt {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index:990;
+	display: none;
+	background-color: rgba(0,0,0, .5);
+	
+	.common-prompt-conner {
+		width: 80%;
+		height: auto;
+		@include borderRadius(1rem);
+		position: absolute;
+		top: 50%;
+		margin-top: -4rem;
+		left: 10%;
+		z-index: 991;
+		border: 1px solid $color_ddd;
+		background-color: $color_fff;
+	    overflow: hidden;
+		
+		h3 {
+			width: 100%;
+			height: 3rem;
+			line-height: 3rem;
+			text-align: center;
+			font-size: 1.5rem;
+		}
+		
+		p {
+			height: auto;
+			line-height: 3rem;
+			text-align: center;
+			color: $color_999;
+		}
+		
+		.common-prompt-content{
+			padding: 1rem;
+		}
+		
+		button {
+			width: 50%;
+			height: 3rem;
+			line-height: 3rem;
+			color: $color_467ca2;
+			border: 0 none;
+			border-right: 1px solid $color_ddd;
+			border-top: 1px solid $color_ddd;
+			background: transparent;
+		}
+		button:last-child {
+			border-right: 0 none;
+		}
+	}
+}
+
+/*
+ * 	Menu
+ */
+footer {
+	width: 100%;
+	height: 4rem;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	z-index: 800;
+	border-top: 1px solid $color_ddd;
+	
+	.common-menu {
+		width: 100%;
+		height: 4rem;
+		
+		li{
+			float:left;
+			height: 100%;
+			border-left: 1px solid $color_ddd;
+			text-align: center;	
+			padding: $sz_8;
+			color: $color_999;
+		}
+		
+		.common-menu-icon{
+			width: $sz_16;
+			height: $sz_16;
+			display: block;
+			margin:0 auto;
+		}
+		
+		li:first-child {
+			border-left: 0 none;
+		}
+		
+		li.active {
+			color: $color_56bd64;
+			
+			.common-menu-home-icon {
+				background: url(../images/home_press.png) center center no-repeat;
+				background-size: auto 100%;
+			}
+			
+			.common-menu-user-icon {
+				background: url(../images/geren_press.png) center center no-repeat;
+				background-size: auto 100%;
+			}
+			
+			.common-menu-charge-icon {
+				background: url(../images/charge_press.png) center center no-repeat;
+				background-size: auto 100%;
+			}
+		}
+		
+		.common-menu-home-icon {
+			background: url(../images/home.png) center center no-repeat;
+			background-size: auto 100%;
+		}
+		
+		.common-menu-user-icon {
+			background: url(../images/geren.png) center center no-repeat;
+			background-size: auto 100%;
+		}
+		
+		.common-menu-charge-icon {
+			background: url(../images/charge.png) center center no-repeat;
+			background-size: auto 100%;
+		}
+		
+	}
+}
+
+/*
+ * 	coupon
+ */
+ body {
+ 	background: $color_f5;
+ }
+ 
+.common-coupon	{
+	width: 96%;
+	height: 9rem;
+	position: relative;
+	padding: 1rem;
+	background-color: $color_fff;
+	margin: .5rem auto;
+	border: 1px solid $color_fff;
+	padding-bottom: 0;
+	
+	.common-coupon-top {
+		height: 5rem;
+		border-bottom: 1px dashed $color_ddd;
+		padding-bottom: 1rem;
+		
+		p {
+			height: 2rem;
+			line-height: 2rem;
+		}
+		
+		.common-coupon-left {
+			border-right: 2px solid $color_ddd;
+		}
+		
+		.common-coupon-amount {
+			font-size: 1.5rem;
+			color: red;
+			text-align: center;
+		}
+		
+		.common-coupon-type {
+			text-align: center;
+		}
+		
+		.common-coupon-right {
+		
+		}
+	}
+	
+	.common-coupon-bottom {
+		height: 3rem;
+		
+		small, span{
+			height: 2rem;
+			line-height: 2rem;
+			font-size: .8333rem;
+			display: inline-block;
+			color: $color_ddd;
+		}
+		
+		span {
+			float: right;
+		}
+	}
+	
+}
+
+
+.common-tab {
+	width: 66%;
+	overflow: hidden;
+	height: 2.5rem;
+	line-height: 2.5rem;
+	margin: 0 auto;
+	background-color: $color_fff;
+	@include borderRadius(1.25rem);
+	text-align: center;
+	
+	li {
+		width: 50%;
+		display: inline-block;
+	}
+	
+	.common-tab-active {
+		background-color: blue;
+		color: $color_fff;
+	}
+}
+
+
+/*
+ *	pages
+ */
+
+.pages {
+	width: 100%;
+	height: 100%;
+	overflow-x: hidden;
+	overflow-y: auto;
+	position: relative;
+}
+
+.app-login-header {
+	width: 100%;
+	height: 13.5rem;
+	padding: 2.16667rem 0 1.08333rem;
+	
+	.app-login-logo {
+		width: 6.08333rem;
+		height: 6.08333rem;
+		display: block;
+		margin:0 auto;
+	}
+	
+	.app-login-slogen {
+		margin-top: 1.08333rem;
+		height: 4.16667rem;
+		line-height: 4.16667rem;
+		font-size: 2rem;
+		text-align: center;
+	}
+}
+
+.app-login-logo-bolin {
+	background: url("../images/logo.png") center center no-repeat;
+	background-size: 100% 100%;
+}

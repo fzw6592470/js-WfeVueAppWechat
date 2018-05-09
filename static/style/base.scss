@@ -1,0 +1,257 @@
+@charset "utf-8";
+/*
+ * author "MartinCui" 
+ * date   2018-01-18
+ * use    BASE CSS
+ */
+ 
+// Definition: Color variable
+$color_fff:     #fff;
+$color_c0:      #c0c0c0;
+$color_f1:      #f1f1f1;
+$color_f5:      #f5f5f5;
+$color_f6:      #f6f6f6;
+$color_f9:      #f9f9f9;
+$color_ef:      #efefef;
+$color_fa:      #fafafa;
+$color_2e:      #2e2e2e;
+$color_b8:      #b8b8b8;
+$color_f4f4f5:  #f4f4f5;
+$color_e9f9ea:  #e9f9ea;
+$color_bbb:     #bbb;
+$color_ccc:     #ccc;
+$color_ddd:     #ddd;
+$color_eee:     #eee;
+$color_333:     #333;
+$color_666:     #666;
+$color_999:     #999;
+$color_ff2e3d:  #ff2e3d; // red
+$color_459750:  #459750; // down green
+$color_56bd64:  #56bd64; // normal green
+$color_656565:  #c8c7c7;
+$color_467ca2:  #467ca2;
+$color_56bd64:  #56bd64;
+$color_54a65b:  #54a65b;
+$color_0B771A:  #0B771A;
+$color_6196bb:  #6196bb;
+$color_13a189:  #a3a189;
+$color_yellow:  yellow;
+$color_red:     red;
+$color_152028:  #152028;
+$color_a7c6dc:  #a7c6dc;
+$color_e8e4e4:  #e8e4e4;
+$color_4e6a7d:  #4e6a7d;
+$color_354e37:  #354e37;
+$color_30343d:  #30343d;
+$color_e9e9e9:  #e9e9e9;
+$color_a7c6dc:  #a7c6dc;
+$color_1c2b36:  #1c2b36;
+$color_161e25:  #161e25;
+
+// Definition: fontSize variable
+$fz_1:      .0833rem;
+$fz_5:      .4167rem;
+$fz_8: 		.6667rem;
+$fz_10:     .8333rem;
+$fz_12:     1rem;
+$fz_14:     1.1667rem;
+$fz_16:     1.3333rem;
+$fz_18:     1.5rem;
+$fz_24:     2rem;
+$fz_25:     2.4167rem;
+$fz_28:     2.3333rem;
+$fz_30:     2.5rem;
+$fz_36:     3rem;
+$fz_48:     4rem; 
+
+
+// Definition: size variable
+$sz_1:      $fz_1;
+$sz_5:      $fz_5;
+$sz_8:		$fz_8;
+$sz_10:     $fz_10;
+$sz_12:     $fz_12;
+$sz_14:     $fz_14;
+$sz_16:     $fz_16;
+$sz_24:     $fz_24;
+$sz_25:     $fz_25;
+$sz_30:     $fz_30;
+$sz_36:     $fz_36;
+$sz_48:     $fz_48;
+$fz_51:     4.25rem; 
+$sz_60:     5rem;
+$sz_66:     5.5rem;
+$sz_72:     6rem;
+$sz_84:     7rem;
+$sz_120:    10rem;
+$sz_144:    12rem;
+$sz_288:    28rem;
+ 
+@mixin borderRadius($border: $fz_5){
+    -webkit-border-radius: $border;
+    -moz-border-radius: $border;
+    -o-border-radius: $border;
+    border-radius: $border;
+}
+
+// Definition: borderRadius function
+@mixin backgroundLine($color01: $color_56bd64, $color_02: $color_56bd64){
+    background-image: -webkit-gradient(linear,center top,center bottom,from($color01), to($color01));
+    background-image: -webkit-linear-gradient( top,$color01,$color01);
+    background-image: -moz-linear-gradient( top,$color01,$color01 ); 
+    background-image: -o-linear-gradient(top,$color01, $color01);
+}
+
+
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+input, a, button, button:hover, a:hover, a:link, a:visited, button:visited,select, select:hover{
+    outline: 0;
+}
+
+
+html,body,h1,h2,h3,h4,h5,h6,div,p,aside,blockquote,q,section,article,video,audio,object,hgroup{
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+html,body{
+    width: 100%;
+    height: 100%;
+    -webkit-text-size-adjust: none;
+    max-width: 100%;
+    overflow-x: hidden;
+    font-family: "微软雅黑", "arial, helvetica, sans-serif";
+    font-size: 62.5%;
+    background-color: $color_fff;
+}
+
+ul,ol{
+    list-style: none;
+}
+
+a,a:hover,a:active,a:link,a:visited{
+    text-decoration: none;
+}
+
+.left{
+    float:left;
+}
+
+.right{
+    float:right;
+}
+
+.clearfix:before{
+    display: table;
+    content: " ";
+    clear: both;
+}
+
+.btn-allow {
+	color: $color_fff;
+	@include borderRadius();
+	@include backgroundLine();
+}
+
+
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?phy0gv');
+  src:  url('../fonts/icomoon.eot?phy0gv#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?phy0gv') format('truetype'),
+    url('../fonts/icomoon.woff?phy0gv') format('woff'),
+    url('../fonts/icomoon.svg?phy0gv#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-home:before {
+  content: "\e900";
+}
+.icon-newspaper:before {
+  content: "\e904";
+}
+.icon-calendar:before {
+  content: "\e953";
+}
+.icon-floppy-disk:before {
+  content: "\e962";
+}
+.icon-users:before {
+  content: "\e972";
+}
+.icon-search:before {
+  content: "\e986";
+}
+.icon-equalizer:before {
+  content: "\e992";
+}
+.icon-cog:before {
+  content: "\e994";
+}
+.icon-cogs:before {
+  content: "\e995";
+}
+.icon-hammer2:before {
+  content: "\e9a8";
+}
+.icon-list2:before {
+  content: "\e9bb";
+}
+.icon-download3:before {
+  content: "\e9c7";
+}
+.icon-upload3:before {
+  content: "\e9c8";
+}
+.icon-plus:before {
+  content: "\ea0a";
+}
+.icon-minus:before {
+  content: "\ea0b";
+}
+.icon-cross:before {
+  content: "\ea0f";
+}
+.icon-checkmark:before {
+  content: "\ea10";
+}
+.icon-enter:before {
+  content: "\ea13";
+}
+.icon-exit:before {
+  content: "\ea14";
+}
+.icon-share:before {
+  content: "\ea7d";
+}
+
+
+
+
+
+
+
+
+

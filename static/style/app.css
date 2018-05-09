@@ -1,0 +1,299 @@
+@charset "UTF-8";
+/*
+ * author "MartinCui" 
+ * date   2018-01-18
+ * use    BASE CSS
+ */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+input, a, button, button:hover, a:hover, a:link, a:visited, button:visited, select, select:hover {
+  outline: 0;
+}
+
+html, body, h1, h2, h3, h4, h5, h6, div, p, aside, blockquote, q, section, article, video, audio, object, hgroup {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  -webkit-text-size-adjust: none;
+  max-width: 100%;
+  overflow-x: hidden;
+  font-family: "微软雅黑", "arial, helvetica, sans-serif";
+  font-size: 62.5%;
+  background-color: #fff;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+a, a:hover, a:active, a:link, a:visited {
+  text-decoration: none;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.clearfix:before {
+  display: table;
+  content: " ";
+  clear: both;
+}
+
+.btn-allow {
+  color: #fff;
+  -webkit-border-radius: 0.4167rem;
+  -moz-border-radius: 0.4167rem;
+  -o-border-radius: 0.4167rem;
+  border-radius: 0.4167rem;
+  background-image: -webkit-gradient(linear, center top, center bottom, from(#56bd64), to(#56bd64));
+  background-image: -webkit-linear-gradient(top, #56bd64, #56bd64);
+  background-image: -moz-linear-gradient(top, #56bd64, #56bd64);
+  background-image: -o-linear-gradient(top, #56bd64, #56bd64);
+}
+
+@font-face {
+  font-family: 'icomoon';
+  src: url("../fonts/icomoon.eot?phy0gv");
+  src: url("../fonts/icomoon.eot?phy0gv#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf?phy0gv") format("truetype"), url("../fonts/icomoon.woff?phy0gv") format("woff"), url("../fonts/icomoon.svg?phy0gv#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-home:before {
+  content: "\e900";
+}
+
+.icon-newspaper:before {
+  content: "\e904";
+}
+
+.icon-calendar:before {
+  content: "\e953";
+}
+
+.icon-floppy-disk:before {
+  content: "\e962";
+}
+
+.icon-users:before {
+  content: "\e972";
+}
+
+.icon-search:before {
+  content: "\e986";
+}
+
+.icon-equalizer:before {
+  content: "\e992";
+}
+
+.icon-cog:before {
+  content: "\e994";
+}
+
+.icon-cogs:before {
+  content: "\e995";
+}
+
+.icon-hammer2:before {
+  content: "\e9a8";
+}
+
+.icon-list2:before {
+  content: "\e9bb";
+}
+
+.icon-download3:before {
+  content: "\e9c7";
+}
+
+.icon-upload3:before {
+  content: "\e9c8";
+}
+
+.icon-plus:before {
+  content: "\ea0a";
+}
+
+.icon-minus:before {
+  content: "\ea0b";
+}
+
+.icon-cross:before {
+  content: "\ea0f";
+}
+
+.icon-checkmark:before {
+  content: "\ea10";
+}
+
+.icon-enter:before {
+  content: "\ea13";
+}
+
+.icon-exit:before {
+  content: "\ea14";
+}
+
+.icon-share:before {
+  content: "\ea7d";
+}
+
+#wechatLogin {
+  overflow: hidden;
+}
+#wechatLogin .app-login-tab {
+  width: 50%;
+  height: 4.3333rem;
+  margin: 0 auto;
+}
+#wechatLogin .app-login-tab li {
+  width: 40%;
+  height: 4.3333rem;
+  display: inline-block;
+  padding-left: 1.3333rem;
+  font-size: 1rem;
+  line-height: 4.3333rem;
+  color: #c0c0c0;
+}
+#wechatLogin .app-login-tab li em {
+  width: 50%;
+  height: .11rem;
+  background-color: #56bd64;
+  display: none;
+  margin-left: 1.3333rem;
+}
+#wechatLogin .app-login-tab li:last-child {
+  margin-left: 20%;
+}
+#wechatLogin .app-login-tab li.app-login-tab-password-icon {
+  background: url("../images/lock.png") left center no-repeat;
+  background-size: auto 1rem;
+}
+#wechatLogin .app-login-tab li.app-login-tab-message-icon {
+  background: url("../images/mail.png") left center no-repeat;
+  background-size: 1rem auto;
+}
+#wechatLogin .app-login-tab li.active {
+  color: #56bd64;
+}
+#wechatLogin .app-login-tab li.active em {
+  display: block;
+}
+#wechatLogin .app-login-tab li.active.app-login-tab-password-icon {
+  background: url("../images/lock.png") left center no-repeat;
+  background-size: auto 1rem;
+}
+#wechatLogin .app-login-tab li.active.app-login-tab-message-icon {
+  background: url("../images/mail.png") left center no-repeat;
+  background-size: 1rem auto;
+}
+#wechatLogin .app-login-form {
+  width: 80%;
+  height: auto;
+  margin-left: 10%;
+}
+#wechatLogin .app-login-form p {
+  width: 100%;
+  height: 4.3333rem;
+  border-bottom: 1px solid #f1f1f1;
+  padding-top: 1rem;
+}
+#wechatLogin .app-login-form p label {
+  width: 20%;
+  height: 3.333rem;
+  line-height: 3.333rem;
+  font-size: 1.1667rem;
+  float: left;
+  margin-bottom: 0;
+}
+#wechatLogin .app-login-form p input {
+  width: 54%;
+  height: 3.2496rem;
+  line-height: 3.2496rem;
+  font-size: 1rem;
+  background-color: #fff !important;
+  border: 0 none;
+  float: left;
+}
+#wechatLogin .app-login-form .app-login-verify-btn {
+  width: 26%;
+  height: 2rem;
+  line-height: 2rem;
+  text-align: center;
+  font-size: 1rem;
+  color: #fff;
+  -webkit-border-radius: 0.4167rem;
+  -moz-border-radius: 0.4167rem;
+  -o-border-radius: 0.4167rem;
+  border-radius: 0.4167rem;
+  background-image: -webkit-gradient(linear, center top, center bottom, from(#56bd64), to(#56bd64));
+  background-image: -webkit-linear-gradient(top, #56bd64, #56bd64);
+  background-image: -moz-linear-gradient(top, #56bd64, #56bd64);
+  background-image: -o-linear-gradient(top, #56bd64, #56bd64);
+  float: left;
+  margin-top: .56665rem;
+}
+#wechatLogin .app-login-form .app-login-password-hidden {
+  width: 1.6666rem;
+  height: 0.8333rem;
+  float: right;
+  margin-top: 1.2rem;
+  display: block;
+  background: url(../images/btn_eye_close.png) center center no-repeat;
+  background-size: 100% auto;
+}
+#wechatLogin .app-login-form .app-login-password-hidden.active {
+  background: url(../images/btn_eye_open.png) center center no-repeat;
+  background-size: 100% auto;
+}
+#wechatLogin .app-login-form .app-login-tab-message {
+  display: none;
+}
+#wechatLogin .app-login-form .app-login-submit {
+  width: 100%;
+  height: 4rem;
+  margin: 2.25rem auto 0.6667rem;
+  letter-spacing: 1rem;
+}
+#wechatLogin .app-login-form .app-login-register, #wechatLogin .app-login-form .app-login-forget {
+  height: 2.3333rem;
+  line-height: 2.3333rem;
+  font-size: 1rem;
+  color: #56bd64;
+}
+#wechatLogin .app-login-form .app-login-register {
+  padding-right: 1rem;
+}
+#wechatLogin .app-login-form .app-login-forget {
+  padding-left: 1rem;
+}
+
+/*# sourceMappingURL=app.css.map */
